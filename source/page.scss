@@ -1,0 +1,27 @@
+@import "../node_modules/zharikov-ui/source/scss/styles";
+
+.container {
+  @include flex($cl,$fs,$fs,$zui-28);
+}
+
+.item {
+  width: $zui-100p;
+  @include flex($cl,$fs,$fs,$zui-12);
+
+  &__title {
+    @include text($headline-x6);
+  }
+
+  &__subtitle {
+    @include text($headline-x4);
+  }
+
+  &__row {
+    @include flex($rw,$fs,$cr,$zui-12);
+  }
+
+  &__column {
+    width: $zui-100p;
+    @include flex($cl,$fs,$sh,$zui-12);
+  }
+}

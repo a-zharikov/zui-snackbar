@@ -1,0 +1,23 @@
+{
+  "name": "zui-control",
+  "version": "1.0.0",
+  "description": "SCSS plugin for creating control",
+  "scripts": {},
+  "author": "Alexander Zharikov <mail@zharikov.design>",
+  "license": "MTI",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-zharikov/zui-control"
+  },
+  "keywords": [
+    "scss",
+    "control",
+    "checkbox",
+    "radio",
+    "toggle"
+  ],
+  "dependencies": {
+    "zharikov-ui": "^3.0.1"
+  },
+  "homepage": "https://zharikov.design/plugins/#control"
+}

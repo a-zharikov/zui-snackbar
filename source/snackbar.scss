@@ -1,0 +1,45 @@
+// Импорт ZUI
+@import "../node_modules/zharikov-ui/source/scss/styles";
+
+$colors: (
+  primary: (background-color: $white, color: $text, border: $primary, icon: $primary, close: $border),
+  success: (background-color: $white, color: $text, border: $success, icon: $success, close: $border),
+  waring: (background-color: $white, color: $text, border: $waring, icon: $waring, close: $border),
+  danger: (background-color: $white, color: $text, border: $danger, icon: $danger, close: $border),
+);
+
+.snackbar {
+  width: auto;
+  border-radius: $zui-8;
+  background: $white;
+  padding: $zui-8 $zui-12;
+  border: 2px solid $white;
+  box-sizing: border-box;
+  @include text($small,$text);
+  @include flex($rw,$fs,$cr,$zui-8,$di);
+
+  i {
+    color: $primary;
+
+    &.close {
+      color: $text;
+      cursor: pointer;
+    }
+  }
+
+  @each $color-name, $color-map in $colors {
+    &.#{$color-name} {
+      border-color: map-get($color-map, border);
+      background-color: map-get($color-map, background-color);
+      color: map-get($color-map, color);
+
+      i {
+        color: map-get($color-map, icon);
+  
+        &.close {
+          color: map-get($color-map, close);
+        }
+      }
+    }
+  }
+}
